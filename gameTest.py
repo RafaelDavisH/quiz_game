@@ -53,7 +53,6 @@ def paragraphs(word,blanks1):
       return pos
   return None
 
-
 # User is prompted to replace the numbered blanks in ml_string,
 # which appear in select_answers with their own words.
 
