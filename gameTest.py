@@ -43,7 +43,6 @@ print
      Right after the paragraph its printed, the user will be prompt with questions,
      one at a time, for each of the blanks.safa
 '''
-
 # A list of key letters for the first paragraph to be passed in to the quiz_game function.
 blanks1 = ["___1___", "___2___", "___3___", "___4___"]
 
