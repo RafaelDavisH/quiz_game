@@ -73,5 +73,3 @@ a.Function  b.Perimenters  c.None  or  d.List" + (3* " "))
   return "\n" + (3 * " ") + final_pg
 
 print quiz_game(sample, blanks1)
-
-
