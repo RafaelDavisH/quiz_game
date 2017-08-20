@@ -13,7 +13,6 @@ from 'Introduction to Serious Programming'."
 print
 
 
-
 # The following its the paragraph to pass in to the quiz_game function.
 sample = '''A ___1___ is created with the def keyword. You specify the inputs a ___1___ takes by
 adding ___2___ separated by commas between the parentheses. ___1___s by default return ___3___ if you
