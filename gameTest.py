@@ -28,7 +28,6 @@ levels = ["Type Start to begin!", "Type Start to begin level 2!"]
      Start or start correctly. It skips to prompt user to the first question.
 '''
 
-
 level1 = "Type Start to begin!" + (3* " ")
 level2 = "Type Start to begin level 2!" + (3 * " ")
 start_list = ["Start","start"]
@@ -41,19 +40,10 @@ def greeting(answer, start_list):
 print greeting(level1, start_list)
 print
 
-
-
-
-
-# Right after the prompt of the paragraph, the user will prompt requesting the user
-# for the answer to the blanks
-# ==================
-# Answer Keys
-# ==================
-#a --> Function
-#b --> Perimeters
-#c --> None
-#d --> list
+'''
+     Right after the paragraph its printed, the user will be prompt with questions,
+     one at a time, for each of the blanks.safa
+'''
 
 # A list of key letters for the first paragraph to be passed in to the quiz_game function.
 blanks1 = ["___1___", "___2___", "___3___", "___4___"]
