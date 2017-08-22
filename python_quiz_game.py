@@ -22,7 +22,10 @@ pg_level = ['''A ___1___ is created with the def keyword. You specify the inputs
 adding ___2___ separated by commas between the parentheses. ___1___s by default return ___3___ if you
 don't specify the value to return. ___2___ can be standard data types such as string, number, dictionary,
 tuple, and ___4___ or can be more complicated such as objects and lambda functions.''',
-            '''This is the second paragraph''']
+            '''This is the second paragraph. You specify the inputs a ___1___ takes by
+adding ___2___separated by commas between the parentheses.''']
+
+mult_answers = ['a.Function  b.Perimenters  c.None  or  d.List','a.blah  b.blahs  c.None  or  d.List']
 
 
 
@@ -50,15 +53,14 @@ def paragraphs(word,blanks):
 
 #         REPLACING BLANKS WITH USERS WORDS
 
-def quiz_game(ml_string, blanks):
+def quiz_game(ml_string, blanks,mult_answers):
   final_pg = []
   ml_string = ml_string.split()
   for word in ml_string:
       replacement = paragraphs(word,blanks)
       if replacement != None:
           print "\n"
-          user_input = raw_input("Choose for the following for blank " + replacement + ": \n\
-a.Function  b.Perimenters  c.None  or  d.List" + (3* " "))
+          user_input = raw_input("Choose your answer from the following for blank " + replacement + ": \n" + mult_answers + (3* " "))
           word = word.replace(replacement, user_input)
           final_pg.append(word)
       else:
@@ -87,8 +89,8 @@ print
 
 print greeting(levels[0], start_list,pg_level[0]) + "\n"
 
-print quiz_game(pg_level[0], blanks[0])
+print quiz_game(pg_level[0], blanks[0],mult_answers[0])
 
 print greeting(levels[1],start_list,pg_level[1])
 
-print quiz_game(pg_level[0],blanks[0])
+print quiz_game(pg_level[1],blanks[1],mult_answers[1])
