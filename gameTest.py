@@ -13,13 +13,18 @@ from 'Introduction to Serious Programming'."
 print
 
 
-# The following its the paragraph to pass in to the quiz_game function.
-sample = '''A ___1___ is created with the def keyword. You specify the inputs a ___1___ takes by
+# The following are the paragraphs to pass in to the quiz_game function for each levels.
+
+pg_level = ['''A ___1___ is created with the def keyword. You specify the inputs a ___1___ takes by
 adding ___2___ separated by commas between the parentheses. ___1___s by default return ___3___ if you
 don't specify the value to return. ___2___ can be standard data types such as string, number, dictionary,
-tuple, and ___4___ or can be more complicated such as objects and lambda functions.'''
+tuple, and ___4___ or can be more complicated such as objects and lambda functions.''','''This is the second paragraph''']
+
+pg_level2 = "This is the second level paragraph"
+
 
 # The following its a fuction that will greet the user with a prompt "Press Y to Start"
+
 levels = ["Type Start to begin!", "Type Start to begin level 2!"]
 
 '''
@@ -29,16 +34,15 @@ levels = ["Type Start to begin!", "Type Start to begin level 2!"]
 
 level1 = "Type Start to begin!" + (3* " ")
 level2 = "Type Start to begin level 2!" + (3 * " ")
-levels = ['Type Start to begin!','Type Start to begin level2']
+levels = ['Type Start to begin!' + (3*' '),'Type Start to begin level2'+ (3*' ')]
 start_list = ["Start","start"]
-def greeting(answer, start_list):
+def greeting(answer, start_list,pg_level):
   answer = raw_input(answer)
   for pos in start_list:
     if pos in answer:
-      if levels in answer 
-      return "\n"+ 
+      return "\n"+ pg_level
     
-print greeting(levels[1], start_list) + "\n"
+print greeting(levels[0], start_list,pg_level[0]) + "\n"
 
 '''
      Right after the paragraph its printed, the user will be prompt with questions,
@@ -77,10 +81,10 @@ a.Function  b.Perimenters  c.None  or  d.List" + (3* " "))
   final_pg = " ".join(final_pg)
   return "\n" + (3 * " ") + final_pg + "\n\n"
 
-print quiz_game(sample, blanks1)
+print quiz_game(pg_level[0], blanks1)
 
 '''
     LEVEL 2
 '''
 
-print greeting(level2,start_list)
+print greeting(level2,start_list,pg_level[1])
