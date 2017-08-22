@@ -50,9 +50,10 @@ print greeting(levels[0], start_list,pg_level[0]) + "\n"
 '''
 # A list of key letters for the first paragraph to be passed in to the quiz_game function.
 blanks1 = ["___1___", "___2___", "___3___", "___4___"]
+blanks = [["___1___", "___2___", "___3___", "___4___"],["___1___", "___2___", "___3___", "___4___"]]
 
-def paragraphs(word,blanks1):
-  for pos in blanks1:
+def paragraphs(word,blanks):
+  for pos in blanks:
     if pos in word:
       return pos
   return None
@@ -65,7 +66,7 @@ def paragraphs(word,blanks1):
     2. ANY WRONG ANSWERS WILL BE SHOWN AT THE END IN THE PARAGRAPH WITH THE WORD
        'WRONG' INSTEAD OF THE NUMERICAL BLANK.
 '''
-def quiz_game(ml_string, blanks1):
+def quiz_game(ml_string, blanks):
   final_pg = []
   ml_string = ml_string.split()
   for word in ml_string:
@@ -81,7 +82,7 @@ a.Function  b.Perimenters  c.None  or  d.List" + (3* " "))
   final_pg = " ".join(final_pg)
   return "\n" + (3 * " ") + final_pg + "\n\n"
 
-print quiz_game(pg_level[0], blanks1)
+print quiz_game(pg_level[0], blanks[0])
 
 '''
     LEVEL 2
