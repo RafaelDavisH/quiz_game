@@ -29,15 +29,16 @@ levels = ["Type Start to begin!", "Type Start to begin level 2!"]
 
 level1 = "Type Start to begin!" + (3* " ")
 level2 = "Type Start to begin level 2!" + (3 * " ")
+levels = ['Type Start to begin!','Type Start to begin level2']
 start_list = ["Start","start"]
 def greeting(answer, start_list):
   answer = raw_input(answer)
   for pos in start_list:
     if pos in answer:
-      return sample
+      if levels in answer 
+      return "\n"+ 
     
-print greeting(level1, start_list)
-print
+print greeting(levels[1], start_list) + "\n"
 
 '''
      Right after the paragraph its printed, the user will be prompt with questions,
@@ -74,7 +75,7 @@ a.Function  b.Perimenters  c.None  or  d.List" + (3* " "))
       else:
           final_pg.append(word)
   final_pg = " ".join(final_pg)
-  return "\n" + (3 * " ") + final_pg
+  return "\n" + (3 * " ") + final_pg + "\n\n"
 
 print quiz_game(sample, blanks1)
 
