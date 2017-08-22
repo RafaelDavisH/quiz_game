@@ -20,8 +20,6 @@ adding ___2___ separated by commas between the parentheses. ___1___s by default 
 don't specify the value to return. ___2___ can be standard data types such as string, number, dictionary,
 tuple, and ___4___ or can be more complicated such as objects and lambda functions.''','''This is the second paragraph''']
 
-pg_level2 = "This is the second level paragraph"
-
 
 # The following its a fuction that will greet the user with a prompt "Press Y to Start"
 
@@ -32,8 +30,6 @@ levels = ["Type Start to begin!", "Type Start to begin level 2!"]
      Start or start correctly. It skips to prompt user to the first question.
 '''
 
-level1 = "Type Start to begin!" + (3* " ")
-level2 = "Type Start to begin level 2!" + (3 * " ")
 levels = ['Type Start to begin!' + (3*' '),'Type Start to begin level2'+ (3*' ')]
 start_list = ["Start","start"]
 def greeting(answer, start_list,pg_level):
@@ -70,7 +66,7 @@ def quiz_game(ml_string, blanks):
   final_pg = []
   ml_string = ml_string.split()
   for word in ml_string:
-      replacement = paragraphs(word,blanks1)
+      replacement = paragraphs(word,blanks)
       if replacement != None:
           print "\n"
           user_input = raw_input("Choose for the following for blank " + replacement + ": \n\
@@ -88,4 +84,4 @@ print quiz_game(pg_level[0], blanks[0])
     LEVEL 2
 '''
 
-print greeting(level2,start_list,pg_level[1])
+print greeting(levels[1],start_list,pg_level[1])
