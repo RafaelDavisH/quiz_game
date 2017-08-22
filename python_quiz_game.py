@@ -27,7 +27,8 @@ adding ___2___separated by commas between the parentheses.''']
 
 mult_answers = ['a.Function  b.Perimenters  c.None  or  d.List','a.blah  b.blahs  c.None  or  d.List']
 
-
+questions = ['Choose your answer from the following list for ','Choose your answer form the following\
+list for blank ']
 
 '''
               FUNCTIONS
@@ -53,21 +54,20 @@ def paragraphs(word,blanks):
 
 #         REPLACING BLANKS WITH USERS WORDS
 
-def quiz_game(ml_string, blanks,mult_answers):
+def quiz_game(ml_string, blanks,questions,mult_answers):
   final_pg = []
   ml_string = ml_string.split()
   for word in ml_string:
       replacement = paragraphs(word,blanks)
       if replacement != None:
           print "\n"
-          user_input = raw_input("Choose your answer from the following for blank " + replacement + ": \n" + mult_answers + (3* " "))
+          user_input = raw_input(questions + replacement + ": \n" + mult_answers + (3* " "))
           word = word.replace(replacement, user_input)
           final_pg.append(word)
       else:
           final_pg.append(word)
   final_pg = " ".join(final_pg)
   return "\n" + (3 * " ") + final_pg + "\n\n"
-
 
 
 '''
@@ -89,8 +89,8 @@ print
 
 print greeting(levels[0], start_list,pg_level[0]) + "\n"
 
-print quiz_game(pg_level[0], blanks[0],mult_answers[0])
+print quiz_game(pg_level[0], blanks[0],questions[0],mult_answers[0])
 
-print greeting(levels[1],start_list,pg_level[1])
+print greeting(levels[1],start_list,pg_level[1]) + "\n"
 
-print quiz_game(pg_level[1],blanks[1],mult_answers[1])
+print quiz_game(pg_level[1],blanks[1],questions[1],mult_answers[1])
