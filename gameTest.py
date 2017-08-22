@@ -51,10 +51,15 @@ def paragraphs(word,blanks1):
     if pos in word:
       return pos
   return None
-
-# User is prompted to replace the numbered blanks in ml_string,
-# which appear in select_answers with their own words.
-
+'''
+    User is prompted to replace the numbered blanks in ml_string,
+    which appear in select_answers with their own words.
+    
+    THINGS TO WORK ON:
+    1. FILL IN THE ANSWER FOR ALL THE BLANKS THAT HAVE THE SAME NUMERICAL SEQUENCE.
+    2. ANY WRONG ANSWERS WILL BE SHOWN AT THE END IN THE PARAGRAPH WITH THE WORD
+       'WRONG' INSTEAD OF THE NUMERICAL BLANK.
+'''
 def quiz_game(ml_string, blanks1):
   final_pg = []
   ml_string = ml_string.split()
@@ -72,3 +77,9 @@ a.Function  b.Perimenters  c.None  or  d.List" + (3* " "))
   return "\n" + (3 * " ") + final_pg
 
 print quiz_game(sample, blanks1)
+
+'''
+    LEVEL 2
+'''
+
+print greeting(level2,start_list)
