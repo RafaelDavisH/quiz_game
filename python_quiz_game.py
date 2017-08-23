@@ -18,7 +18,9 @@ blanks = [
           ["__________", "__________", "__________"],
           ["___1___", "___2___", "___3___"],
           ["___1___","___2___","___3___","___4___","___5___","___6___","___7___"],
-          ["___1___", "___2___", "___3___", "___4___"]
+          ["___1___", "___2___", "___3___", "___4___"],
+          ["___1___","___2___","___3___","___4___","___5___","___6___"],
+          ["___1___","___2___","___3___","___4___","___5___","___6___","___7___","___8___"]
           ]
 
 pg_level = ['''3 of the 5 ways you can think as a programmers:\n
@@ -29,13 +31,16 @@ pg_level = ['''3 of the 5 ways you can think as a programmers:\n
 ___4___ or a mix of all, as long as it starts with a ___5___ or ___6___. ___7___ can vary.''', '''___1___ is \
 a sequence of ___2___ sourrounded by ___3___ - single or ___4___.''', '''An ___1___ refers to position within an \
 ordered list. Python strings can be thought of as list of  ___2___; each ___3___ is given an ___4___ from \
-___5___ to the end of the string. We can use ___6___ numbers which will start ___7___ from the end of the string''']
+___5___ to the end of the string. We can use ___6___ numbers which will start ___7___ from the end of the string''','''___1___ is a ___2___ \
+built in Python. When the ___3___ number its given, which gives the first ___4___ in ___5___ where the ___6___ appears. If ___7___ is not \
+found, its given an ___8___.''']
 
 mult_answers = ['a.Computing Empathy  b.Artificial Thinking  c.Abstract Thinking  d.Technological empathy  e.Procedural Thinking','a.Backus-Naur\
- b.Congnitive  c.Arithmetically  d.Precisely  e.Concise', ' ', ' ',' ']
+ b.Congnitive  c.Arithmetically  d.Precisely  e.Concise', ' ', ' ',' ',' ']
 
 questions = ['Choose your answer from the following list for ','Choose your answer from the following\
- list for blank ','Type your answer for the following blank ','Type your answer for the following blank ']
+ list for blank ','Type your answer for the following blank ','Type your answer for the following blank ','Type your answer for the following blank','\
+Type your answer for the following blank ']
 
 '''
               FUNCTIONS
