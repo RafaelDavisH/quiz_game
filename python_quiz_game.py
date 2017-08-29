@@ -51,10 +51,15 @@ no_mult = ['***the first 3 blanks must be in order to get them correctly*** ',' 
 
 easy_msg = 'Choose your answer from the following list for blank  '
 
+<<<<<<< HEAD
 medium_msg = 'Choose your answer from the following clues for blank  '
 
 hard_msg = 'Type your answer for the following blank '
 
+=======
+questions = ['Choose your answer from the following list for ','Choose your answer form the following\
+list for blank ']
+>>>>>>> master
 
 '''
               FUNCTIONS
@@ -84,6 +89,7 @@ def check_blank(word, blanks):
   return None
 
 
+<<<<<<< HEAD
 #         ANSWER VERIFICATION
 
 def answer_verify(answers, answer_key):
@@ -110,12 +116,25 @@ def quiz_game(paragraphs, blanks, msg_to_follow, mult_choices, answer_key):
           i+= 1
           word = checked_answers
           final_paragraph.append(word)
+=======
+def quiz_game(ml_string, blanks,questions,mult_answers):
+  final_pg = []
+  ml_string = ml_string.split()
+  for word in ml_string:
+      replacement = paragraphs(word,blanks)
+      if replacement != None:
+          print "\n"
+          user_input = raw_input(questions + replacement + ": \n" + mult_answers + (3* " "))
+          word = word.replace(replacement, user_input)
+          final_pg.append(word)
+>>>>>>> master
       else:
           final_paragraph.append(word)
   final_paragraph = " ".join(final_paragraph)
   return "\n\n" + (3 * " ") + final_paragraph + "\n\n\n\n"
 
 
+<<<<<<< HEAD
 #         LOOP FOR PARAGRAPHS
 
 def play(msg_to_follow,mult_choices):
@@ -127,6 +146,8 @@ def play(msg_to_follow,mult_choices):
     return " YOU ARE DONE! " + user
 
 
+=======
+>>>>>>> master
 '''
                   GAME START
 '''
@@ -144,7 +165,17 @@ paragraphs that will contain numbered blanks. These numbered blanks are keywords
 from 'Introduction to Serious Programming'."
 print
 
+<<<<<<< HEAD
 
 print greeting(levels)
 
  
+=======
+print greeting(levels[0], start_list,pg_level[0]) + "\n"
+
+print quiz_game(pg_level[0], blanks[0],questions[0],mult_answers[0])
+
+print greeting(levels[1],start_list,pg_level[1]) + "\n"
+
+print quiz_game(pg_level[1],blanks[1],questions[1],mult_answers[1])
+>>>>>>> master
